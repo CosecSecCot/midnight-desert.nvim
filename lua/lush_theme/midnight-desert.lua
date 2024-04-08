@@ -56,21 +56,8 @@ local theme = lush(function(injected_functions)
     local color_0 = hsl(249, 14, 37)
     local color_1 = hsl(245, 15, 69)
     local color_2 = hsl(270, 12, 91)
-    local color_3 = hsl(19, 33, 82)
-    local color_4 = hsl(24, 46, 72)
-    local color_5 = hsl(22, 34, 54)
-    -- local color_6 = hsl()
-    -- local color_7 = hsl()
-
-    -- local color_0 = hsl(249, 14, 37)
-    -- local color_1 = hsl(294, 11, 65)
-    -- local color_2 = hsl(342, 19, 79)
-    -- local color_3 = hsl(270, 12, 91)
-    -- local color_4 = hsl(281, 25, 78)
-    -- local color_5 = hsl(43, 74, 85)
-    -- local color_6 = hsl(27, 31, 72)
-    -- local color_7 = hsl(339, 22, 59)
-    -- local color_8 = hsl(11, 70, 70)
+    local color_3 = hsl(24, 46, 72)
+    local color_4 = hsl(22, 34, 54)
 
     return {
         -- The following are the Neovim (as of 0.8.0-dev+100-g371dfb174) highlight
@@ -85,12 +72,9 @@ local theme = lush(function(injected_functions)
         --
         -- Colors:
 
-        -- Normal { bg = hsl(252, 14, 7), fg = hsl(270, 12, 91) }, -- Normal text
-
         Normal { bg = color_0.de(50).da(90), fg = color_2 }, -- Normal text
         LineNr { fg = Normal.fg.da(60) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 
-        --
         -- ColorColumn    { }, -- Columns set with 'colorcolumn'
         -- Conceal        { }, -- Placeholder characters substituted for concealed text (see 'conceallevel')
         -- Cursor         { }, -- Character under the cursor
@@ -114,7 +98,7 @@ local theme = lush(function(injected_functions)
         -- FoldColumn     { }, -- 'foldcolumn'
         SignColumn {}, -- Column where |signs| are displayed
         -- IncSearch      { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-        Substitute { fg = color_5.da(60), bg = color_5.de(20) }, -- |:substitute| replacement text highlighting
+        Substitute { fg = color_4.da(60), bg = color_4.de(20) }, -- |:substitute| replacement text highlighting
         -- LineNrAbove    { }, -- Line number for when the 'relativenumber' option is set, above the cursor line
         -- LineNrBelow    { }, -- Line number for when the 'relativenumber' option is set, below the cursor line
         -- CursorLineNr   { }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
@@ -146,11 +130,11 @@ local theme = lush(function(injected_functions)
         -- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
         -- SpellLocal     { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
         -- SpellRare      { }, -- Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
-        -- StatusLine { bg = color_0 }, -- Status line of current window
+        StatusLine { bg = Normal.bg }, -- Status line of current window
         -- StatusLineNC   { }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
         TabLine { bg = color_0 }, -- Tab pages line, not active tab page label
         TabLineFill { bg = color_0.da(30) }, -- Tab pages line, where there are no labels
-        TabLineSel { fg = color_5.li(10) }, -- Tab pages line, active tab page label
+        TabLineSel { fg = color_4.li(10) }, -- Tab pages line, active tab page label
         Visual { bg = color_0.da(50) }, -- Visual mode selection
         -- VisualNOS      { }, -- Visual mode selection when vim is "Not Owning the Selection".
         -- WarningMsg     { }, -- Warning messages
@@ -170,7 +154,7 @@ local theme = lush(function(injected_functions)
 
         Comment { fg = color_0.de(25).da(20), gui = "italic" }, -- Any comment
 
-        Constant { fg = color_5 }, -- (*) Any constant
+        Constant { fg = color_4 }, -- (*) Any constant
         -- String { fg = Constant.fg, gui = "italic" }, --   A string constant: "this is a string"
         -- Character      { }, --   A character constant: 'c', '\n'
         -- Number         { }, --   A number constant: 234, 0xff
@@ -184,11 +168,11 @@ local theme = lush(function(injected_functions)
         -- Conditional    { }, --   if, then, else, endif, switch, etc.
         -- Repeat         { }, --   for, do, while, etc.
         -- Label          { }, --   case, default, etc.
-        Operator { fg = color_4.da(10) }, --   "sizeof", "+", "*", etc.
+        Operator { fg = color_3.da(10) }, --   "sizeof", "+", "*", etc.
         -- Keyword        { }, --   any other keyword
         -- Exception      { }, --   try, catch, throw
 
-        PreProc { fg = color_4.sa(80).da(10) }, -- (*) Generic Preprocessor
+        PreProc { fg = color_3.sa(80).da(10) }, -- (*) Generic Preprocessor
         -- Include { bg = color_5 }, --   Preprocessor #include
         -- Define         { }, --   Preprocessor #define
         -- Macro          { }, --   Same as Define

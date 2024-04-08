@@ -1,5 +1,33 @@
-A Lush Theme for Neovim.
-===
+# Midnight Desert - A Lush Theme For Neovim
 
-See: http://git.io/lush.nvim for more information on Lush and a helper script
-to setup your repo clone.
+A purple and brown theme made with [lush](https://github.com/rktjmp/lush.nvim).
+I hope you enjoy it :D
+
+## Screenshots
+
+![images](./screenshots/demo1.png)
+
+## Installation
+
+You can use any package manager you want, for example:
+
+Using `lazy`:
+
+``` lua
+return {
+    "CosecSecCot/midnight-desert.nvim",
+    dependencies = {
+        "rktjmp/lush.nvim",
+    },
+    -- no setup function required
+}
+```
+
+Using `packer`:
+
+``` lua
+use {
+    "CosecSecCot/midnight-desert.nvim",
+    requires = "rktjmp/lush.nvim"
+}
+```
