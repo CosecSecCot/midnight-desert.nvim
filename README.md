@@ -31,3 +31,19 @@ use {
     requires = "rktjmp/lush.nvim"
 }
 ```
+
+## Usage
+
+To use this colorscheme simply type ```:colorscheme midnight-desert```
+
+or add this code in your config file:
+
+```vim
+" Vimscript
+colorscheme midnight-desert
+```
+or
+```lua
+-- Lua
+vim.cmd [[colorscheme midnight-desert]]
+```
