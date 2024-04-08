@@ -120,7 +120,7 @@ local theme = lush(function(injected_functions)
         -- CursorLineNr   { }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
         -- CursorLineFold { }, -- Like FoldColumn when 'cursorline' is set for the cursor line
         -- CursorLineSign { }, -- Like SignColumn when 'cursorline' is set for the cursor line
-        -- MatchParen     { }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+        MatchParen { bg = color_0 }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
         -- ModeMsg        { }, -- 'showmode' message (e.g., "-- INSERT -- ")
         -- MsgArea        { }, -- Area for messages and cmdline
         -- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
@@ -170,7 +170,7 @@ local theme = lush(function(injected_functions)
 
         Comment { fg = color_0.de(25).da(20), gui = "italic" }, -- Any comment
 
-        Constant { fg = color_5.li(5) }, -- (*) Any constant
+        Constant { fg = color_5 }, -- (*) Any constant
         -- String { fg = Constant.fg, gui = "italic" }, --   A string constant: "this is a string"
         -- Character      { }, --   A character constant: 'c', '\n'
         -- Number         { }, --   A number constant: 234, 0xff
@@ -208,7 +208,7 @@ local theme = lush(function(injected_functions)
         -- Debug          { }, --   Debugging statements
 
         Underlined { gui = "undercurl" }, -- Text that stands out, HTML links
-        -- Ignore         { }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
+        Ignore {}, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
         -- Error          { }, -- Any erroneous construct
         -- Todo           { }, -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
