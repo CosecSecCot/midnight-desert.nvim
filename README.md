@@ -42,7 +42,9 @@ or add this code in your config file:
 " Vimscript
 colorscheme midnight-desert
 ```
+
 or
+
 ```lua
 -- Lua
 vim.cmd [[colorscheme midnight-desert]]
